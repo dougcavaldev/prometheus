@@ -25,7 +25,7 @@
 	background-repeat: no-repeat;
 	background-size:cover;
 	background-position:center;
-	position:relative;
+	position:static;
     overflow-y: hidden;
 }
 .a{
@@ -38,10 +38,11 @@
     transform: translateY(-50%);
 	text-align:center;
     width:70%;
-	right:0;left:0;
+	right:0;left:0;	
     margin:auto;
     height:400px;
-    background-color: rgba(236, 48, 20, 0.9);
+	background-color: #09092c;
+	border-radius: 20px;
 }
 .white-panel{
     background-color: rgba(255,255, 255, 1);
@@ -52,7 +53,9 @@
     right:calc(50% - 50px);
     transition:.3s ease-in-out;
     z-index:0;
-    box-shadow: 0 0 15px 9px #00000096;
+	box-shadow: 0 0 15px 9px #00000096;
+	border-radius: 20px;
+	color: #09092c;
 }
 .login-reg-panel input[type="radio"]{
     position:relative;
@@ -115,23 +118,27 @@
 	
 	border-radius: 3px;
 	outline: none;
-	align-items: center;
+	
+	vertical-align: middle;
 }
 .login-show input[type="button"] {
     max-width: 150px;
     width: 100%;
-    background: #444444;
+    background:#09092c;
     color: #f9f9f9;
     border: none;
     padding: 10px;
     text-transform: uppercase;
     border-radius: 2px;
-    float:right;
-    cursor:pointer;
+    float:inline-start;
+	cursor:pointer;
+	align-items: center;
+	vertical-align: middle;
 }
 .login-show a{
     display:inline-block;
-    padding:10px 0;
+	padding:10px 0;
+	vertical-align: middle;
 }
 
 .register-show input[type="text"], .register-show input[type="password"]{
@@ -183,25 +190,28 @@
 							
 		<div class="register-info-box">
 			<h2>Don't have an account?</h2>
-			<p>Lorem ipsum dolor sit amet</p>
+			<p>Make now</p>
 			<label id="label-login" for="log-login-show">Register</label>
 			<input type="radio" name="active-log-panel" id="log-login-show">
 		</div>
 							
 		<div class="white-panel">
 			<div class="login-show">
-				<h2>LOGIN</h2>
+				<p></p>
+				<h2>Make your Login</h2>
 				<input type="text" placeholder="Email">
 				<input type="password" placeholder="Password">
 				<input type="button" value="Login">
-				<a href="">Forgot password?</a>
+				<a href="/Users/douglas.martins/Desktop/Prometheus/forgotpassword.html"  >Forgot password?</a>
 			</div>
 			<div class="register-show">
-				<h2>REGISTER</h2>
+				<a href="/Users/douglas.martins/Desktop/Prometheus/forgotpassword.html">
+				<h2>REGISTER</h2></a>
 				<input type="text" placeholder="Email">
 				<input type="password" placeholder="Password">
 				<input type="password" placeholder="Confirm Password">
-				<input type="button" value="Register">
+				<form method="GET" action="/Users/douglas.martins/Desktop/Prometheus/forgotpassword.html">
+				<button type="submit" value="Register"></button></form>
 			</div>
 		</div>
 	</div>
